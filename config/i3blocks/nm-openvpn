@@ -1,0 +1,11 @@
+#!/bin/bash
+
+avail_cons=$(nmcli -t c s --active | grep vpn | awk -F: '{ print $1 }')
+
+if [ -n "$avail_cons" ]; then
+    echo -n "  "
+    echo "$avail_cons" | head -1
+else
+    echo -n "  "
+    echo "down"
+fi

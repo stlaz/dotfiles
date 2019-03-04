@@ -1,0 +1,24 @@
+{
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "native",
+    "window.zoomLevel": 0,
+
+    "workbench.colorTheme": "Default Light+",
+    "workbench.startupEditor": "none",
+    "workbench.settings.editor": "json",
+    // keep tabs opened on opening via Ctrl + P
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+
+    "editor.fontSize": 9,
+    "editor.fontFamily": "'Fira Code', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 4,
+
+    "editor.rulers": [
+        80
+    ],
+
+    "search.location": "panel",
+    "search.usePCRE2": true,
+}
