@@ -21,4 +21,6 @@
 
     "search.location": "panel",
     "search.usePCRE2": true,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
 }
