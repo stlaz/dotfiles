@@ -10,7 +10,6 @@
   [[default]]
     [[[child0]]]
       fullscreen = False
-      last_active_term = 9beb4086-d07c-4f4f-b8f4-5f89af9a3317
       last_active_window = True
       maximised = True
       order = 0
@@ -47,31 +46,26 @@
       parent = child2
       profile = default
       type = Terminal
-      uuid = 9beb4086-d07c-4f4f-b8f4-5f89af9a3317
     [[[terminal4]]]
       order = 1
       parent = child2
       profile = default
       type = Terminal
-      uuid = 069722d1-8f0a-4e46-9895-bead402aaa9a
     [[[terminal6]]]
       order = 0
       parent = child5
       profile = default
       type = Terminal
-      uuid = f614bfc8-efc0-43ee-99fb-81e14e4681f0
     [[[terminal8]]]
       order = 0
       parent = child7
       profile = default
       type = Terminal
-      uuid = 410cb584-f748-4447-a47a-82d301536d76
     [[[terminal9]]]
       order = 1
       parent = child7
       profile = default
       type = Terminal
-      uuid = e53cd1e9-09d5-407a-8518-16aae093754e
 [plugins]
 [profiles]
   [[default]]
