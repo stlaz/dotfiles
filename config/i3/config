@@ -183,6 +183,9 @@ for_window[class="Firefox"] border none
 # bindsym Mod1+Shift+r restart #pkill -SIGRTMIN+12 i3blocks
 bindsym Mod1+Control+l exec i3lock-custom
 
+# bindsym for screenshots
+bindsym Print exec scrot -z ~/Pictures/%Y-%m-%d-%T-screenshot.png
+
 # bind Fn audio keys to audio and refresh i3blocks
 bindsym XF86AudioMute exec BLOCK_BUTTON=3 ~/.config/i3blocks/volume && pkill -SIGRTMIN+10 i3blocks
 bindsym XF86AudioLowerVolume exec BLOCK_BUTTON=5 ~/.config/i3blocks/volume && pkill -SIGRTMIN+10 i3blocks
