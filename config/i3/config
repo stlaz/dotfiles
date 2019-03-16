@@ -193,6 +193,6 @@ bindsym XF86AudioRaiseVolume exec BLOCK_BUTTON=4 ~/.config/i3blocks/volume && pk
 
 bindsym XF86Display exec xrandr --auto
 exec_always xset -b # turn off system bell
-exec_always --no-startup-id feh --bg-fill ~/Pictures/half-life.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper
 exec compton --backend glx --vsync opengl-swc --no-fading-openclose -c -o0 --daemon  --glx-swap-method 5
 exec unclutter -idle 2 & # auto-hide cursor
