@@ -196,6 +196,6 @@ bindsym XF86Display exec xrandr --auto
 bindsym $mod+t exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/.config/i3/term_layout.json' && for i in `seq 5`; do i3-msg exec /bin/termite; done"
 
 exec_always xset -b # turn off system bell
-exec_always --no-startup-id feh --bg-fill ~/Pictures/half-life.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper
 exec compton --backend glx --vsync opengl-swc --no-fading-openclose -c -o0 --daemon  --glx-swap-method 5
 exec unclutter -idle 2 & # auto-hide cursor
