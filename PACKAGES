@@ -1,0 +1,16 @@
+i3-wm
+i3blocks
+i3status
+acpi # for battery status
+pulseaudio-alsa
+compton
+feh
+ttf-font-awesome
+noto-fonts # provides whitespace fallback for ttf-font-awesome issue
+zsh
+zsh-autosuggestions
+zsh-completions
+zsh-syntax-highlighting
+powerline
+networkmanager-openvpn # for the i3 status widget
+scrot
