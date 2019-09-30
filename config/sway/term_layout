@@ -1,0 +1,29 @@
+#!/bin/bash
+set -e
+
+WSPACE=$1
+if [ -z "$WSPACE" ]; then
+    echo "Gotta specify a workspace mate"
+    exit 1
+fi
+
+swaymsg workspace $WSPACE
+for i in $(seq 5); do
+    swaymsg exec /bin/termite &
+done
+while [ $(swaymsg -t get_tree | jq ".nodes | .[] | .nodes | .[] | select( .name == \"${WSPACE}\") | .nodes | length") -ne 5 ]; do
+    :
+done
+
+# right side terminals
+swaymsg splitv
+swaymsg focus left
+swaymsg move right
+
+# left-side terminals
+swaymsg focus left
+swaymsg focus left
+swaymsg splitv
+swaymsg focus left
+swaymsg move right
+
