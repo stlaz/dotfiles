@@ -17,6 +17,10 @@ i3-lock custom script
 ```
 ln -s config/i3lock/i3lock-custom.sh /usr/bin/i3lock-custom
 ```
+## Turn off pc beeping
+```
+# echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
+```
 
 ![screenshot](./screenshot.png)
 ![screenshot2](./screenshot2.png)
