@@ -24,7 +24,7 @@
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
-command=/usr/lib/i3blocks/$BLOCK_NAME
+command=/home/slaznick/.config/i3blocks/i3blocks-contrib/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 separator=false
@@ -43,7 +43,7 @@ separator=false
 [volume]
 #label=VOL
 #label=♪
-label=
+label= 
 instance=Master
 #instance=PCM
 # interval=once
@@ -62,13 +62,13 @@ signal=10
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-label=/
+label=/ 
 instance=/
 separator=false
 interval=30
 
 [disk]
-label=/home
+label=/home 
 #instance=/mnt/data
 interval=30
 
@@ -84,7 +84,7 @@ interval=30
 
 [wifi]
 #instance=wlp3s0
-label=
+label= 
 instance=wlp61s0
 interval=10
 separator=false
@@ -99,7 +99,7 @@ interval=5
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-label=CPU
+label=CPU 
 interval=10
 min_width=CPU: 0.00%
 #separator=false
@@ -109,7 +109,7 @@ min_width=CPU: 0.00%
 # The type defaults to "mem" if the instance is not specified.
 [memory]
 # label=MEM
-label=RAM
+label=RAM 
 # separator=true
 interval=10
 
@@ -121,7 +121,7 @@ interval=10
 # The battery instance defaults to 0.
 [battery]
 # label=BAT
-label=
+label= 
 #instance=1
 interval=30
 
@@ -146,10 +146,10 @@ interval=20
 # Support multiple chips, though lm-sensors.
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-[temperature]
-label= 
+#[temperature] # it runs "sensors -j" which can't read one of the temps which pollutes logs
+#label= 
 # label=TEMP
-interval=10
+#interval=10
 
 # Date Time
 #
