@@ -144,3 +144,5 @@ ZSH_HIGHLIGHT_STYLES[line]=precommand
 
 python -OO /usr/bin/powerline-daemon -q
 . /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+eval $(keychain --eval --quiet)
