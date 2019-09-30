@@ -4,7 +4,7 @@
 #bold_is_bright = true
 #clickable_url = true
 #dynamic_title = true
-font = Monospace 7
+font = Monospace 6
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -40,8 +40,8 @@ scrollback_lines = 10000
 
 [colors]
 # special
-foreground      = #68615e
-foreground_bold = #68615e
+foreground      = #474747
+foreground_bold = #474747
 cursor          = #68615e
 background      = #f8f8f8
 
