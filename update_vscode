@@ -1,0 +1,17 @@
+#!/bin/bash
+
+VSCODE_DIRNAME="VSCode-linux-x64"
+VSCODE_BCP="/opt/vscode_bcp"
+VSCODE_ROOT="/opt/vscode"
+
+newest_version_tar=$(ls -1 code-stable-* | sort | tail -1)
+echo $newest_version_tar
+
+wget https://update.code.visualstudio.com/latest/linux-x64/stable -O "code-stable-$(date -Iminutes).tar.gz"
+
+if [ -n "${newest_version_tar}" ]; then
+    tar -xzf $newest_version_tar --force-local
+    rm -rf $VSCODE_BCP
+    mv $VSCODE_ROOT $VSCODE_BCP
+    mv $VSCODE_DIRNAME $VSCODE_ROOT
+fi
