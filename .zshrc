@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 export GOPATH='/home/slaznick/go'
 export GOBIN=$GOPATH/bin
+export GOPROXY=direct # no, thank you
 export PATH=$PATH:$GOBIN
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
