@@ -108,6 +108,11 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 
 # allows command suggestions after `sudo`
 alias sudo='sudo '
+alias pcert='openssl x509 -noout -text -in'
+
+function pbundle() {
+    openssl crl2pkcs7 -nocrl -certfile $1 | openssl pkcs7 -print_certs -noout -text
+}
 
 zstyle ':completion:*' rehash true # update completions' with current PATH on completion request
 
