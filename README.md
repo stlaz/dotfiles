@@ -22,5 +22,14 @@ ln -s config/i3lock/i3lock-custom.sh /usr/bin/i3lock-custom
 # echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 ```
 
+## Make it possible to launch terminal apps from the "Launch with ..." menus
+
+This is a hack around GNOME, which tries to look up known terminals when
+launching a terminal application.
+
+```
+ln -s /usr/bin/alacritty /usr/bin/xterm
+```
+
 ![screenshot](./screenshot.png)
 ![screenshot2](./screenshot2.png)
