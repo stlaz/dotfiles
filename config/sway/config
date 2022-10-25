@@ -9,10 +9,11 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Your preferred terminal emulator
-set $term termite
+set $term alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu BEMENU_BACKEND=wayland bemenu-run -p "|>" --fn $uifont  -H 0 --tf "#009933" --hb "#009933" --hf "#000000" | xargs swaymsg exec
 
 set $laptop_display eDP-1
 
@@ -186,10 +187,11 @@ bindsym $mod+r mode "resize"
 bar {
     position top
 
-    font pango:monospace 7.7
+    font pango:lemon 7.7
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command i3blocks # while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    # status_command i3blocks # while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    swaybar_command waybar
 
     colors {
         statusline #ffffff
@@ -200,29 +202,31 @@ bar {
 
 ##############
 
+# xwayland disable
+
 default_border pixel 3
 default_floating_border none
 
 for_window [class="Firefox"] border none
 
 # bind Fn audio keys to audio and refresh i3blocks
-bindsym XF86AudioMute exec BLOCK_BUTTON=3 ~/.config/i3blocks/volume && pkill -SIGRTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume exec BLOCK_BUTTON=5 ~/.config/i3blocks/volume && pkill -SIGRTMIN+10 i3blocks
-bindsym XF86AudioRaiseVolume exec BLOCK_BUTTON=4 ~/.config/i3blocks/volume && pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym Print exec GRIM_DEFAULT_DIR=~/Pictures grim
 
-bindsym Mod1+Control+L exec swaylock
-bindsym $mod+t exec '~/.config/sway/term_layout 3'
+bindsym Mod1+Control+L exec swaylock -i ~/Pictures/lockscreen_bg
 # bindsym XF86Display exec -> should output to all monitors
 
 # set wallpaper on all (*) monitors
-output "*" background ~/Pictures/half-life.jpg fill
+output "*" background ~/Pictures/wallpaper fill
 
 titlebar_padding 3 2
 
 # get the input device with `swaymsg -t get_seats `
-seat seat0 hide_cursor 2500
+seat * hide_cursor when-typing enable
 
-input 1267:32:Elan_Touchpad {
+input type:touchpad {
     tap enabled
     natural_scroll enabled
 }
@@ -231,6 +235,8 @@ input type:keyboard {
     xkb_layout "us,cz"
     xkb_variant ",qwerty"
     xkb_options "grp:alt_shift_toggle"
+
+    xkb_numlock enabled
 }
 
 bindswitch lid:on output $laptop_display disable
@@ -238,6 +244,7 @@ bindswitch lid:off output $laptop_display enable
 
 # start keychain, careful as this won't clear it on user logout
 exec keychain --quiet --clear
+exec --no-startup-id blueman-applet
 
 ##############
 
