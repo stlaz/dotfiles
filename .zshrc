@@ -99,16 +99,22 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export EDITOR='vim'
+export BAT_THEME='GitHub'
 export GOPATH='/home/slaznick/go'
 export GOBIN=$GOPATH/bin
 export GOPROXY=direct # no, thank you
 export PATH=$PATH:$GOBIN
+export GPG_TTY=$(tty)
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 
 # allows command suggestions after `sudo`
 alias sudo='sudo '
 alias pcert='openssl x509 -noout -text -in'
+# alias grep=rg
+# alias cat=bat
+# alias find=fd
+alias k=kubectl
 
 function pbundle() {
     openssl crl2pkcs7 -nocrl -certfile $1 | openssl pkcs7 -print_certs -noout -text
@@ -149,6 +155,11 @@ ZSH_HIGHLIGHT_STYLES[path_pathseparator]=path_prefix_pathseparator
 ZSH_HIGHLIGHT_STYLES[line]=precommand
 
 python -OO /usr/bin/powerline-daemon -q
-. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. /usr/lib/python3.10/site-packages/powerline/bindings/zsh/powerline.zsh
 
 eval $(keychain --eval --quiet)
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
