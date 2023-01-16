@@ -31,5 +31,3 @@ launching a terminal application.
 ln -s /usr/bin/alacritty /usr/bin/xterm
 ```
 
-![screenshot](./screenshot.png)
-![screenshot2](./screenshot2.png)
