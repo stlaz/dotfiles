@@ -13,10 +13,6 @@ mkdir ~/.vim/colors
 ln -s ~/.cache/dein/repos/github.com/jonathanfilip/vim-lucius/colors/lucius.vim .vim/colors/
 ```
 
-i3-lock custom script
-```
-ln -s config/i3lock/i3lock-custom.sh /usr/bin/i3lock-custom
-```
 ## Turn off pc beeping
 ```
 # echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
