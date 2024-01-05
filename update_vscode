@@ -4,10 +4,10 @@ VSCODE_DIRNAME="VSCode-linux-x64"
 VSCODE_BCP="/opt/vscode_bcp"
 VSCODE_ROOT="/opt/vscode"
 
+wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-x64' -O "code-stable-$(date -Iminutes).tar.gz"
+
 newest_version_tar=$(ls -1 code-stable-* | sort | tail -1)
 echo $newest_version_tar
-
-wget https://update.code.visualstudio.com/latest/linux-x64/stable -O "code-stable-$(date -Iminutes).tar.gz"
 
 if [ -n "${newest_version_tar}" ]; then
     tar -xzf $newest_version_tar --force-local
