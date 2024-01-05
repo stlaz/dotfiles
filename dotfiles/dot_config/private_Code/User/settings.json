@@ -1,0 +1,39 @@
+{
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "native",
+
+    "workbench.colorTheme": "Default Light+",
+    "workbench.startupEditor": "none",
+    "workbench.settings.editor": "json",
+    // keep tabs opened on opening via Ctrl + P
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+
+    "editor.fontSize": 9,
+    "editor.fontFamily": "'Fira Code', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 4,
+     // links mess up clicking golang imports
+    "editor.links": false,
+
+    "editor.rulers": [
+        80
+    ],
+
+    "editor.bracketPairColorization.enabled": true,
+    "terminal.integrated.fontSize": 9,
+
+    "telemetry.telemetryLevel": "off",
+
+    "go.formatTool": "goimports",
+
+    "diffEditor.ignoreTrimWhitespace": false,
+
+    // should hopefully prevent 'Getting token failed: Error: The name org.freedesktop.secrets was not provided by any .service files'
+    "git.terminalAuthentication": false,
+    "python.jediEnabled": false,
+    "go.useLanguageServer": true,
+    "go.testFlags": ["-race"],
+
+    "github.gitAuthentication": false
+}

@@ -1,3 +1,15 @@
+# Using this repo
+
+Install chezmoi. Then
+```
+chezmoi init --ssh stlaz/dotfiles
+chezmoi diff         # to check changes to your configs
+chezmoi apply -v     # to apply the changes from above
+chezmoi merge <FILE> # in case you want to alter some of the changes
+```
+
+More on chezmoi usage at https://www.chezmoi.io
+
 # Dotfiles and other config to simplify workstation config
 
 oh-my-zsh:

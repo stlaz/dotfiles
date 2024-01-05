@@ -68,6 +68,8 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 # User configuration
 
@@ -108,54 +110,51 @@ export GPG_TTY=$(tty)
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 
-# allows command suggestions after `sudo`
-alias sudo='sudo '
-alias pcert='openssl x509 -noout -text -in'
-# alias grep=rg
-# alias cat=bat
-# alias find=fd
+alias sudo='sudo ' # allows command suggestions after `sudo`
+alias pcert='openssl x509 -noout -text'
 alias k=kubectl
+alias watch='watch ' # to keep aliases working in watch
 
 function pbundle() {
     openssl crl2pkcs7 -nocrl -certfile $1 | openssl pkcs7 -print_certs -noout -text
 }
 
-zstyle ':completion:*' rehash true # update completions' with current PATH on completion request
+zstyle ':completion:*' rehash true # update completions with current PATH on completion request
 
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=blue
-ZSH_HIGHLIGHT_STYLES[bracket-error]=fg=red,bold
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=cyan
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none
-ZSH_HIGHLIGHT_STYLES[globbing]=fg=blue
-ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=none
-ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]=fg=yellow
-ZSH_HIGHLIGHT_STYLES[default]=none
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
-ZSH_HIGHLIGHT_STYLES[cursor]=standout
-ZSH_HIGHLIGHT_STYLES[commandseparator]=none
-ZSH_HIGHLIGHT_STYLES[redirection]=none
-ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
-ZSH_HIGHLIGHT_STYLES[arg0]=fg=green
-ZSH_HIGHLIGHT_STYLES[comment]=fg=black,bold
-ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
-ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=green,underline
-ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=cyan
-ZSH_HIGHLIGHT_STYLES[root]=standout
-ZSH_HIGHLIGHT_STYLES[bracket-level-1]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[bracket-level-2]=fg=green,bold
-ZSH_HIGHLIGHT_STYLES[bracket-level-3]=fg=magenta,bold
-ZSH_HIGHLIGHT_STYLES[path]=underline
-ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=yellow,bold
-ZSH_HIGHLIGHT_STYLES[bracket-level-5]=fg=cyan,bold
-ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=fg=cyan
-ZSH_HIGHLIGHT_STYLES[assign]=none
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=blue
-ZSH_HIGHLIGHT_STYLES[path_pathseparator]=path_prefix_pathseparator
-ZSH_HIGHLIGHT_STYLES[line]=precommand
+# ZSH_HIGHLIGHT_STYLES[bracket-error]=fg=red,bold
+# ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=cyan
+# ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none
+# ZSH_HIGHLIGHT_STYLES[globbing]=fg=blue
+# ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue
+# ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=none
+# ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]=fg=yellow
+# ZSH_HIGHLIGHT_STYLES[default]=none
+# ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
+# ZSH_HIGHLIGHT_STYLES[cursor]=standout
+# ZSH_HIGHLIGHT_STYLES[commandseparator]=none
+# ZSH_HIGHLIGHT_STYLES[redirection]=none
+# ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
+# ZSH_HIGHLIGHT_STYLES[arg0]=fg=green
+# ZSH_HIGHLIGHT_STYLES[comment]=fg=black,bold
+# ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
+# ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=green,underline
+# ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=cyan
+# ZSH_HIGHLIGHT_STYLES[root]=standout
+# ZSH_HIGHLIGHT_STYLES[bracket-level-1]=fg=blue,bold
+# ZSH_HIGHLIGHT_STYLES[bracket-level-2]=fg=green,bold
+# ZSH_HIGHLIGHT_STYLES[bracket-level-3]=fg=magenta,bold
+# ZSH_HIGHLIGHT_STYLES[path]=underline
+# ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=yellow,bold
+# ZSH_HIGHLIGHT_STYLES[bracket-level-5]=fg=cyan,bold
+# ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=fg=cyan
+# ZSH_HIGHLIGHT_STYLES[assign]=none
+# ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=blue
+# ZSH_HIGHLIGHT_STYLES[path_pathseparator]=path_prefix_pathseparator
+# ZSH_HIGHLIGHT_STYLES[line]=precommand
 
 python -OO /usr/bin/powerline-daemon -q
-. /usr/lib/python3.10/site-packages/powerline/bindings/zsh/powerline.zsh
+. /usr/share/powerline/bindings/zsh/powerline.zsh
 
 eval $(keychain --eval --quiet)
 
