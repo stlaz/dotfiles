@@ -1,2 +1,3 @@
 **/.git
 **/.git/**/*
+.config/nvim/lazy-lock.json

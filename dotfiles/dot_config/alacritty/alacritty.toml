@@ -1,28 +1,26 @@
-# theme = "Iceberg-Light"
-
-[colors.bright]
-black = "0x8389a3"
-blue = "0x22478e"
-cyan = "0x327698"
-green = "0x598030"
-magenta = "0x6845ad"
-red = "0xcc3768"
-white = "0x262a3f"
-yellow = "0xb6662d"
+[colors.primary]
+background = '#f8f8f8'
+foreground = '#2a2b33'
 
 [colors.normal]
-black = "0xdcdfe7"
-blue = "0x2d539e"
-cyan = "0x3f83a6"
-green = "0x668e3d"
-magenta = "0x7759b4"
-red = "0xcc517a"
-white = "0x33374c"
-yellow = "0xc57339"
+black   = '#000000'
+red     = '#de3d35'
+green   = '#3e953a'
+yellow  = '#d2b67b'
+blue    = '#2f5af3'
+magenta = '#a00095'
+cyan    = '#3e953a'
+white   = '#bbbbbb'
 
-[colors.primary]
-background = "0xe8e9ec"
-foreground = "0x33374c"
+[colors.bright]
+black   = '#000000'
+red     = '#de3d35'
+green   = '#3e953a'
+yellow  = '#d2b67b'
+blue    = '#2f5af3'
+magenta = '#a00095'
+cyan    = '#3e953a'
+white   = '#ffffff'
 
 [font]
 size = 6
@@ -30,4 +28,3 @@ normal = { family="JetBrainsMono Nerd Font", style="Regular" }
 bold = { family="JetBrainsMono Nerd Font", style="Bold" }
 italic = { family="JetBrainsMono Nerd Font", style="Italic" }
 bold_italic = { family="JetBrainsMono Nerd Font", style="Bold Italic" }
-

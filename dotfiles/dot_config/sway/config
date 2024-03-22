@@ -207,8 +207,9 @@ bar {
 default_border pixel 3
 default_floating_border none
 
-for_window [class="Firefox"] border none
-
+for_window {
+       [app_id="firefox" title="Picture-in-Picture"] floating enable
+}
 # bind Fn audio keys to audio and refresh i3blocks
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2.5%
