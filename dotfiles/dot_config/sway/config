@@ -13,7 +13,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu BEMENU_BACKEND=wayland bemenu-run -p "|>" --fn "Fira Code 12px"  -H 0 --tf "#009933" --hb "#009933" --hf "#000000" | xargs swaymsg exec
+set $menu BEMENU_BACKEND=wayland bemenu-run -p "|>" --fn "FiraCode Nerd Font 12px"  -H 0 --tf "#009933" --hb "#009933" --hf "#000000" | xargs swaymsg exec
 
 set $laptop_display eDP-1
 
@@ -207,14 +207,12 @@ bar {
 default_border pixel 3
 default_floating_border none
 
-for_window {
-       [app_id="firefox" title="Picture-in-Picture"] floating enable
-}
+for_window [class="Firefox"] border none
 
 # bind Fn audio keys to audio and refresh i3blocks
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2.5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2.5%
 bindsym Print exec GRIM_DEFAULT_DIR=~/Pictures grim
 
 bindsym Mod1+Control+L exec swaylock -i ~/Pictures/lockscreen_bg

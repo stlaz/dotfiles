@@ -9,12 +9,13 @@
     "workbench.editor.enablePreviewFromQuickOpen": false,
 
     "editor.fontSize": 9,
-    "editor.fontFamily": "'Fira Code', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'FiraCode Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "boundary",
     "editor.tabSize": 4,
      // links mess up clicking golang imports
     "editor.links": false,
+    "editor.stickyScroll.enabled": true, // for now, disable if it sucks
 
     "editor.rulers": [
         80
