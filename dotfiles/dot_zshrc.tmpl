@@ -102,7 +102,7 @@ source /usr/share/fzf/completion.zsh
 
 export EDITOR='vim'
 export BAT_THEME='GitHub'
-export GOPATH='/home/slaznick/go'
+export GOPATH='{{ .chezmoi.homeDir }}/go'
 export GOBIN=$GOPATH/bin
 export GOPROXY=direct # no, thank you
 export PATH=$PATH:$GOBIN
