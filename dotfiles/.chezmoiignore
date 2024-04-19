@@ -1,3 +1,7 @@
 **/.git
 **/.git/**/*
+**/.gitignore
+**/.github
+**/.github/**
+**/.luarc.json
 .config/nvim/lazy-lock.json
