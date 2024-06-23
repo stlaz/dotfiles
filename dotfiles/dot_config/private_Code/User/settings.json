@@ -36,5 +36,6 @@
     "go.useLanguageServer": true,
     "go.testFlags": ["-race"],
 
-    "github.gitAuthentication": false
+    "github.gitAuthentication": false,
+    "github.copilot.editor.enableAutoCompletions": true
 }
