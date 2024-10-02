@@ -1,0 +1,10 @@
+location=middle
+show=run
+width=600
+height=500
+always_parse_args=true
+show_all=false
+run-print_command=true
+insensitive=true
+hide_scroll=true
+prompt=

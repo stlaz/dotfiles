@@ -1,0 +1,75 @@
+
+@define-color base   #24273a;
+@define-color crust  rgba(24, 25, 38, 0.85);
+@define-color text   #cad3f5;
+@define-color border #38aae7;
+
+#entry {
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 0px 4px 0px 4px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#entry:selected {
+  color: @text;
+  background-color: @border;
+  padding: 5px 10px;
+}
+ 
+#text:selected {
+  color: @base;
+}
+ 
+#window {
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  background: transparent;
+  font-family: "JetBrainsMono Nerd Font Mono";
+  font-size:12px;
+}
+
+#input {
+  border: 1px solid transparent; /* so that focusing the input won't cause the window to change sizes */
+  background-color: @base;
+  border-radius: 4px;
+  margin: 4px 4px 16px 4px;
+  padding: 4px 10px;
+  color: @text;
+}
+
+#input:focus {
+  border: 1px solid @border;
+}
+
+#inner-box {
+  color: @crust;
+  border-radius: 0px;
+}
+
+#outer-box {
+  background-color: @crust;
+  border-radius: 4px;
+  border: 1px solid @border;
+  padding: 25px;
+  box-shadow: 0px 0px 3px 1px @base;
+  margin: 1px;
+}
+
+#scroll {
+  background-color: transparent;
+}
+#text {
+  color: @text;
+  background-color: transparent;
+} 
+
+#img {
+  background-color: transparent;
+  margin-right: 15px;
+}
+*/
