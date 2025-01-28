@@ -14,7 +14,7 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: lemon, Roboto, Helvetica, Arial, sans-serif;
+    font-family: JetBrainsMono Nerd Font, Roboto, Helvetica, Arial, sans-serif;
     font-size: 10px;
     font-weight: 600;
     min-height: 0;
@@ -68,7 +68,7 @@ tooltip * {
     box-shadow: inset 0 -1px #ffffff;
 }
 
-#workspaces button.focused, #workspaces button.visible {
+#workspaces button.focused, #workspaces button.active {
     background-color: #64727D;
     box-shadow: inset 0 -1px #ffffff;
 }
@@ -205,8 +205,6 @@ label:focus {
 #language {
     background: #33baf1;
     color: #740864;
-    padding: 0 5px;
-/*    margin: 0 5px; */
     min-width: 16px;
 }
 

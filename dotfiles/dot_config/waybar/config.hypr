@@ -4,7 +4,7 @@
     "height": 14, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "sway/mode", "custom/media"],
+    "modules-left": ["hyprland/workspaces", "custom/media"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["tray", "wireplumber", "network", "cpu", "memory", "temperature", "backlight", "disk", "disk#d2", "battery", "clock", "hyprland/language"],
     // Modules configuration
@@ -25,9 +25,15 @@
     // },
     "hyprland/workspaces": {
           "format": "{name}",
+          "on-scroll-up": "hyprctl dispatch workspace e-1",
+          "on-scroll-down": "hyprctl dispatch workspace e+1",
 //        "enable-bar-scroll": true,
 //        "disable-scroll-wraparound": true,
 //        "warp-on-scroll": true
+    },
+    "hyprland/window": {
+          "on-scroll-up": "hyprctl dispatch workspace e-1",
+          "on-scroll-down": "hyprctl dispatch workspace e+1",
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
