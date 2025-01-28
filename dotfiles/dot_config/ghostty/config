@@ -1,0 +1,8 @@
+window-decoration=false
+resize-overlay=never
+theme=catppuccin-mocha
+font-size=7
+
+# keybindings
+keybind=all:ctrl+shift+,=reload_config
+keybind=ctrl+shift+f=write_scrollback_file:paste
