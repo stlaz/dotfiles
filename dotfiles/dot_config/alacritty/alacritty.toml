@@ -1,38 +1,21 @@
-window.opacity = 1
 
-import = [
-  "~/.config/alacritty/catppuccin-latte.toml"
+general.import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
 ]
 
-#[colors.primary]
-#background = '#f8f8f8'
-#foreground = '#2a2b33'
-#
-#[colors.normal]
-#black   = '#000000'
-#red     = '#de3d35'
-#green   = '#3e953a'
-#yellow  = '#d2b67b'
-#blue    = '#2f5af3'
-#magenta = '#a00095'
-#cyan    = '#3e953a'
-#white   = '#bbbbbb'
-#
-#[colors.bright]
-#black   = '#000000'
-#red     = '#de3d35'
-#green   = '#3e953a'
-#yellow  = '#d2b67b'
-#blue    = '#2f5af3'
-#magenta = '#a00095'
-#cyan    = '#3e953a'
-#white   = '#ffffff'
+[window]
+opacity = 1
+padding = { x=2, y=2 }
+# blur = true
+
+[scrolling]
+history = 50000
 
 [colors]
 cursor = {cursor = "CellForeground", text = "CellBackground"}
 
 [font]
-size = 6
+size = 6.6
 normal = { family="JetBrainsMono Nerd Font", style="Regular" }
 bold = { family="JetBrainsMono Nerd Font", style="Bold" }
 italic = { family="JetBrainsMono Nerd Font", style="Italic" }
