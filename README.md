@@ -55,3 +55,9 @@ User password must match the gnome-keyring password. After that, follow
 https://wiki.archlinux.org/title/GNOME/Keyring#PAM_step.
 
 `seahorse` is useful to access the gnome-keyring contents.
+
+## Changing system fonts
+
+```
+gsettings set org.gnome.desktop.interface font-name 'Cantarell 10'
+```
