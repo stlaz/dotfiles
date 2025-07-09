@@ -1,14 +1,18 @@
 {
-    "window.menuBarVisibility": "toggle",
+    "window.menuBarVisibility": "compact",
     "window.titleBarStyle": "native",
+    "window.customTitleBarVisibility": "never",
+    "window.density.editorTabHeight":"default",
+    "window.zoomLevel": -0.8,
+    "window.menuStyle": "custom",
 
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Tokyo Night Light",
     "workbench.startupEditor": "none",
     "workbench.settings.editor": "json",
     // keep tabs opened on opening via Ctrl + P
     "workbench.editor.enablePreviewFromQuickOpen": false,
 
-    "editor.fontSize": 9,
+    "editor.fontSize": 10,
     "editor.fontFamily": "'FiraCode Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "boundary",
@@ -26,8 +30,6 @@
 
     "telemetry.telemetryLevel": "off",
 
-    "go.formatTool": "goimports",
-
     "diffEditor.ignoreTrimWhitespace": false,
 
     // should hopefully prevent 'Getting token failed: Error: The name org.freedesktop.secrets was not provided by any .service files'
@@ -35,7 +37,20 @@
     "python.jediEnabled": false,
     "go.useLanguageServer": true,
     "go.testFlags": ["-race"],
+    "go.formatTool": "goimports",
 
     "github.gitAuthentication": false,
-    "github.copilot.editor.enableAutoCompletions": true
+    "chat.mcp.enabled": false,
+    "chat.mcp.discovery.enabled": false,
+    "github.copilot.chat.newWorkspaceCreation.enabled": false,
+    "github.copilot.chat.startDebugging.enabled": false,
+    "python.analysis.typeCheckingMode": "standard",
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "go": false
+    },
 }
