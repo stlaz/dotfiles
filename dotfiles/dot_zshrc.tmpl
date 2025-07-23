@@ -115,6 +115,7 @@ alias pcert='openssl x509 -noout -text'
 alias k=kubectl
 alias watch='watch ' # to keep aliases working in watch
 alias v='nvim '
+alias diff='diff --color=always '
 
 function pbundle() {
     openssl crl2pkcs7 -nocrl -certfile $1 | openssl pkcs7 -print_certs -noout -text
